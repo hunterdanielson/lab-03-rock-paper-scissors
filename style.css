@@ -2,6 +2,11 @@ input {
     display: none;
 }
 
+img {
+    width: 150px;
+    height: 150px;
+}
+
 input[type=radio]:checked + img {
     border: solid 1px blue;
 }

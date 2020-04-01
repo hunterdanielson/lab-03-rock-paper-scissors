@@ -1,3 +1,4 @@
+// function will return 1 if win, 0 if draw, -1 if lose
 export function didWeWin(player, computer) {
     if (player === computer) {
         return 0;
@@ -14,7 +15,7 @@ export function didWeWin(player, computer) {
     } else if (player === 'scissors' && computer === 'rock') {
         return -1;
     } else {
-        console.log('invalid input');
+        console.log('error');
         return;
     }
 }

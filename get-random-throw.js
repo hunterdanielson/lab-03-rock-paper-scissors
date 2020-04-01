@@ -1,5 +1,4 @@
 
-
 export function getRandomThrow() {
     // generate random choice for computer 
     let number = Math.floor(Math.random() * 3); 
