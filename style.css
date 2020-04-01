@@ -1,5 +1,6 @@
 html, body { 
     height:100%;
+    background-image: url('https://freefrontend.com/assets/img/css-background-patterns/simple-pattern-with-css3.png');
 }
 html {
     display:table; width:100%;
@@ -15,6 +16,7 @@ input {
 img {
     width: 150px;
     height: 150px;
+    background-color: white;
 }
 
 input[type=radio]:checked + img {

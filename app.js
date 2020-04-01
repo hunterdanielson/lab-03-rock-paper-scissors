@@ -12,6 +12,8 @@ const computerChoiceDiv = document.getElementById('computer-choice');
 const computerChoiceHeading = document.getElementById('computer-choice-heading');
 const timesReset = document.getElementById('times-reset');
 
+const img = document.createElement('img');
+
 let wins = 0;
 let draws = 0;
 let total = 0;
@@ -24,11 +26,17 @@ playButton.addEventListener('click', () => {
 
     // figure out what player picked
     const userChoice = selectedChoice.value;
-    console.log('userChoice', userChoice);
 
     // computer choice
     let computerChoice = getRandomThrow();
-    console.log('computerChoice', computerChoice);
+
+    if (computerChoice === 'rock') {
+        img.src = './icons/rockIcon.png';
+    } else if (computerChoice === 'paper') {
+        img.src = './icons/paperIcon.png';
+    } else if (computerChoice === 'scissors') {
+        img.src = './icons/scissorsIcon.png';
+    }
     
     
     
@@ -53,7 +61,7 @@ playButton.addEventListener('click', () => {
     // only shows up if game has been played
     if (total > 0) {
         computerChoiceHeading.style.visibility = 'visible';
-        computerChoiceDiv.textContent = computerChoice;
+        computerChoiceDiv.appendChild(img);
     }
     
 });

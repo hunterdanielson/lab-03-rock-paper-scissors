@@ -15,7 +15,6 @@ export function didWeWin(player, computer) {
     } else if (player === 'scissors' && computer === 'rock') {
         return -1;
     } else {
-        console.log('error');
         return;
     }
 }
