@@ -20,3 +20,7 @@ img {
 input[type=radio]:checked + img {
     border: solid 1px blue;
 }
+
+#computer-choice-heading {
+    visibility: hidden;
+}
