@@ -6,10 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
 
 <body>
+    <div id="r-p-s">
+        <label>
+            <input name="p-choice" type="radio" value="rock" checked/>
+            <p>rock here</p>
+        </label>
+        <label>
+            <input name="p-choice" type="radio" value="paper"/>
+            <p>paper here</p>
+        </label>
+        <label>
+            <input name="p-choice" type="radio" value="scissors"/>
+            <p>scissors here</p>
+        </label>
+    </div>
+    <button id="play-button">Play</button>
+    <div>
+        <span id="computer-choice"></span>
+    </div>
+    
+    <article id="records-section">
+        <h2>Records</h2>
+        <div>Wins: <span id="wins"></span></div>
+        <div>Loses: <span id="loses"></span></div>
+        <div>Draws: <span id="draws"></span></div>
+        <div>Total: <span id="total"></span></div>
+    </article>
+
+    <button id="reset-button">Reset</button>
 
     <script type="module" src="app.js"></script>
 </body>

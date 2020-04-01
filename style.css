@@ -1,0 +1,7 @@
+input {
+    display: none;
+}
+
+input[type=radio]:checked + img {
+    border: solid 1px blue;
+}
