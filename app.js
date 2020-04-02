@@ -1,5 +1,9 @@
-import { didWeWin } from './didWeWin.js';
+
 import { getRandomThrow } from './get-random-throw.js';
+
+// my own stretch goal - adding Lizard Spock to the mix
+import { getRandomThrowLS } from './get-random-throw-LS.js';
+import { didWeWin } from './didWeWin.js';
 
 // get things from the DOM
 const playButton = document.getElementById('play-button');
@@ -11,6 +15,18 @@ const totalDiv = document.getElementById('total');
 const computerChoiceDiv = document.getElementById('computer-choice');
 const computerChoiceHeading = document.getElementById('computer-choice-heading');
 const timesReset = document.getElementById('times-reset');
+
+// my stretch goal
+const lsButton = document.getElementById('l-s-button');
+const lizardContainer = document.getElementById('lizard-container');
+const spockContainer = document.getElementById('spock-container');
+let gameMode = '';
+const welcome = document.getElementById('welcome');
+const rockRule = document.getElementById('rock-rule');
+const paperRule = document.getElementById('paper-rule');
+const scissorRule = document.getElementById('scissor-rule');
+const lizardRule = document.getElementById('lizard-rule');
+const spockRule = document.getElementById('spock-rule');
 
 const img = document.createElement('img');
 
@@ -28,7 +44,11 @@ playButton.addEventListener('click', () => {
     const userChoice = selectedChoice.value;
 
     // computer choice
+   
     let computerChoice = getRandomThrow();
+    if (gameMode === 'ls') {
+        computerChoice = getRandomThrowLS();
+    }
 
     if (computerChoice === 'rock') {
         img.src = './icons/rockIcon.png';
@@ -36,6 +56,10 @@ playButton.addEventListener('click', () => {
         img.src = './icons/paperIcon.png';
     } else if (computerChoice === 'scissors') {
         img.src = './icons/scissorsIcon.png';
+    } else if (computerChoice === 'lizard') {
+        img.src = './icons/lizardIcon.png';
+    } else if (computerChoice === 'spock') {
+        img.src = './icons/spockIcon.png';
     }
     
     
@@ -64,6 +88,7 @@ playButton.addEventListener('click', () => {
         computerChoiceDiv.appendChild(img);
     }
     
+    
 });
 
 resetButton.addEventListener('click', () => {
@@ -83,4 +108,29 @@ resetButton.addEventListener('click', () => {
     // track how many times reset button pushed
     resetButtonCount++;
     timesReset.textContent = resetButtonCount;
+
+    // reset lizard-spock
+    lizardContainer.style.display = 'none';
+    spockContainer.style.display = 'none';
+    gameMode = '';
+    welcome.textContent = 'Welcome to Rock-Paper-Scissors';
+    rockRule.textContent = 'Rock beats scissors';
+    paperRule.textContent = 'Paper beats rock';
+    scissorRule.textContent = 'Scissors beats paper';
+    lizardRule.textContent = '';
+    spockRule.textContent = '';
+});
+
+lsButton.addEventListener('click', () => {
+
+    lizardContainer.style.display = 'inline';
+    spockContainer.style.display = 'inline';
+    gameMode = 'ls';
+    welcome.textContent = 'Welcome to Rock-Paper-Scissors-Lizard-Spock';
+    rockRule.textContent = 'Rock beats scissors and lizard';
+    paperRule.textContent = 'Paper beats rock and spock';
+    scissorRule.textContent = 'Scissors beats paper and lizard';
+    lizardRule.textContent = 'Lizard beats paper and spock';
+    spockRule.textContent = 'Spock beats rock and scissors';
+
 });

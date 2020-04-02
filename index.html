@@ -10,6 +10,17 @@
 </head>
 
 <body>
+    <h1 id="welcome">Welcome to Rock-Paper-Scissors</h1>
+    <p>The rules are as they have always been: </p>
+    <ul>
+        <li>If they are the same it is a draw</li>
+        <li id="rock-rule">Rock beats paper</li>
+        <li id="paper-rule">Paper beats rock</li>
+        <li id="scissor-rule">Scissors beats paper</li>
+        <li id="lizard-rule"></li>
+        <li id="spock-rule"></li>
+    </ul>
+
     <div id="r-p-s">
         <label>
             <input name="p-choice" type="radio" value="rock" checked/>
@@ -24,8 +35,19 @@
             <input name="p-choice" type="radio" value="scissors"/>
             <img src="./icons/scissorsIcon.png">
         </label>
+        <label id="lizard-container">
+            <input name="p-choice" type="radio" value="lizard"/>
+            <img src="./icons/lizardIcon.png">
+            
+        </label>
+        <label id="spock-container">
+            <input name="p-choice" type="radio" value="spock"/>
+            <img src="./icons/spockIcon.png">
+            
+        </label>
     </div>
     <button id="play-button">Play</button>
+    <button id="l-s-button">Switch to RPSLS</button>
     <div>
         <h2 id="computer-choice-heading">The computer picked</h2>
         <span id="computer-choice"></span>

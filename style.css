@@ -26,3 +26,8 @@ input[type=radio]:checked + img {
 #computer-choice-heading {
     visibility: hidden;
 }
+
+/* stretch goal */
+#lizard-container, #spock-container {
+    display: none;
+}
