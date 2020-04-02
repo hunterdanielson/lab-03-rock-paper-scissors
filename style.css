@@ -1,0 +1,33 @@
+html, body { 
+    height:100%;
+    background-image: url('https://freefrontend.com/assets/img/css-background-patterns/simple-pattern-with-css3.png');
+}
+html {
+    display:table; width:100%;
+}
+body {
+    display:table-cell; text-align:center; vertical-align:middle;
+}
+
+input {
+    display: none;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+}
+
+input[type=radio]:checked + img {
+    border: solid 1px blue;
+}
+
+#computer-choice-heading {
+    visibility: hidden;
+}
+
+/* stretch goal */
+#lizard-container, #spock-container {
+    display: none;
+}
