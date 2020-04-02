@@ -5,6 +5,7 @@ export function didWeWin(userChoice, computerChoice) {
     let choiceStack = ['rock', 'scissors', 'lizard', 'paper', 'spock'];
     let userChoiceIndex = choiceStack.indexOf(userChoice);
     let computerChoiceIndex = choiceStack.indexOf(computerChoice);
+
     const results = [
         //going from left to right, and top to bottom, categories are:
         //rock, scissors, lizard, paper, spock 
@@ -13,7 +14,6 @@ export function didWeWin(userChoice, computerChoice) {
         [1, 1, 0, -1, -1],
         [-1, 1, 1, 0, -1],
         [-1, -1, 1, 1, 0]
-        
     ];
 
     let userResult = results[computerChoiceIndex][userChoiceIndex];

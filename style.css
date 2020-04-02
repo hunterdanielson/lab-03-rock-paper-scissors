@@ -1,12 +1,28 @@
+* {
+    font-family: 'Courier New', Courier, monospace
+}
+
 html, body { 
     height:100%;
     background-image: url('https://freefrontend.com/assets/img/css-background-patterns/simple-pattern-with-css3.png');
 }
-html {
-    display:table; width:100%;
+#welcome {
+    text-align: center;
 }
-body {
-    display:table-cell; text-align:center; vertical-align:middle;
+#container{
+    margin: auto;
+    text-align:center;
+    height: 80%;
+    width: 50%; 
+    overflow: scroll;
+    background-color: white;
+    border-radius: 40px;
+}
+
+
+
+ul {
+    list-style-type: none;
 }
 
 input {
